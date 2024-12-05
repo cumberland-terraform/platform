@@ -1,0 +1,18 @@
+{
+    "NETWORK" : {
+      "key": "NAT",
+      "name": "TRANSLATION"
+    },
+    "PRIVATE" : {
+      "key": "PRV",
+      "name": "PRIVATE"
+    },
+    "PUBLIC" : {
+      "key": "PUB", 
+      "name": "PUBLIC"
+    },
+    "CONTAINER": {
+      "key": "CNI",
+      "name": "CONTAINER"
+    }
+  }

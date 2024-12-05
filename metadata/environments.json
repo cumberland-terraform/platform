@@ -1,0 +1,14 @@
+{
+    "DEVELOPMENT": {
+        "key": "DEV",
+        "name": "DEVELOPMENT"
+    },
+    "STAGING": {
+        "key": "STG",
+        "name": "STAGING" 
+    },
+    "PRODUCTION": {
+        "key": "PRD",
+        "name": "PRODUCTION"
+    }
+}

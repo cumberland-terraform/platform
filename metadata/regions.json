@@ -1,0 +1,18 @@
+{
+    "US EAST 1"       : {
+      "key"           : "E1",
+      "name"          : "us-east-1"
+    },
+    "US EAST 2"       : {
+      "key"           : "E2",
+      "name"          : "us-east-2"
+    },
+    "US WEST 1"       : {
+      "key"           : "W1",
+      "aws_region"    : "us-west-1"
+    },
+    "US WEST 2"       : {
+      "key"           : "W2",
+      "name"          : "us-west-2"
+    }
+  }
