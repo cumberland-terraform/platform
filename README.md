@@ -21,7 +21,7 @@ provider "aws" {
 
 ```
 module "platform" {
-	source                      = "source goes here"
+	source 					    = "github.com/cumberland-terraform/platform"
 	
 	platform                    = {
         client                  = "<client>"
