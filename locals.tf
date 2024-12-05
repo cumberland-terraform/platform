@@ -158,6 +158,14 @@ locals {
                                 data.aws_caller_identity.current.account_id,
                                 "key"
                             ])
+            alias           = join(":", [
+                                "arn",
+                                "aws",
+                                "kms",
+                                data.aws_region.current.name,
+                                data.aws_caller_identity.current.account_id,
+                                "alias"
+                            ])
         }
         s3                  = {
             bucket          = join(":", [
