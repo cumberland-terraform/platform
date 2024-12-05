@@ -116,9 +116,7 @@ pipeline {
 			steps {
 				sh '''
 					terraform-docs \
-						-c .ci/.tfdocs_md.yml .
-					terraform-docs \
-						-c .ci/.tfdocs_json.yml .
+						-c .ci/.tfdocs.yml .
 				'''
 			}
 		}
