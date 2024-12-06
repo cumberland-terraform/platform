@@ -28,11 +28,11 @@ data "aws_subnets" "subnets" {
     }
 }
 
-data "aws_security_group" "dmem_security_group" {
-    count           = local.conditions.dmem_sg_query_valid ? 1 : 0
+data "aws_security_group" "private_security_group" {
+    count           = local.conditions.private_sg_query_valid ? 1 : 0
 
     dynamic "filter" {
-        for_each    = local.queries.dmem_security_group
+        for_each    = local.queries.private_security_group
 
         content {
             name    = "tag:${filter.key}"
@@ -41,11 +41,11 @@ data "aws_security_group" "dmem_security_group" {
     }
 }
 
-data "aws_security_group" "rhel_security_group" {
-    count           = local.conditions.rhel_sg_query_valid ? 1 : 0
+data "aws_security_group" "public_security_group" {
+    count           = local.conditions.public_sg_query_valid ? 1 : 0
 
     dynamic "filter" {
-        for_each    = local.queries.rhel_security_group
+        for_each    = local.queries.public_security_group
 
         content {
             name    = "tag:${filter.key}"

@@ -34,8 +34,8 @@ output "network" {
     vpc                   = try(data.aws_vpc.vpc[0], null)
     subnets               = try(data.aws_subnets.subnets[0], null)
     security_groups       = {
-      dmem                = try(data.aws_security_group.dmem_security_group[0], null)
-      rhel                = try(data.aws_security_group.rhel_security_group[0], null)
+      public              = try(data.aws_security_group.public_security_group[0], null)
+      private             = try(data.aws_security_group.private_security_group[0], null)
     }
   }
 }
