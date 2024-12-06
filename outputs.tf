@@ -1,20 +1,20 @@
 output "metadata" {
-  description           = "Platform metdata."
-  value                 = {
-    client              = local.client
-    environment         = local.environment
-    subnet_type         = local.subnet_type
-    region              = local.region
+  description             = "Platform metdata."
+  value                   = {
+    client                = local.client
+    environment           = local.environment
+    subnet_type           = local.subnet_type
+    region                = local.region
   }
 }
 
 output "aws" {
-  description           = "Platform AWS metadata"
-  value                 = {
-    caller_arn          = data.aws_caller_identity.current.arn
-    region              = data.aws_region.current.name
-    account_id          = data.aws_caller_identity.current.account_id
-    arn                 = local.arn
+  description             = "Platform AWS metadata"
+  value                   = {
+    caller_arn            = data.aws_caller_identity.current.arn
+    region                = data.aws_region.current.name
+    account_id            = data.aws_caller_identity.current.account_id
+    arn                   = local.arn
   }
 }
 
