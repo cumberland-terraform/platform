@@ -53,18 +53,18 @@ variable "configuration" {
 variable "hydration" {
   description               = "This variable is entirely optional. This object is made of override flags that prevent certain AWS API Calls from being made. This object is essential in new accounts, when prerequisite resources have not yet been deployed. It is also useful when the platform module is being called as a submodule, to suppress unnecessary data calls."
   type                      = object({
-    vpc_query               = optional(bool, true)
-    subnets_query           = optional(bool, true)
-    private_sg_query        = optional(bool, true)
-    public_sg_query         = optional(bool, true)
+    vpc_query               = optional(bool, false)
+    subnets_query           = optional(bool, false)
+    private_sg_query        = optional(bool, false)
+    public_sg_query         = optional(bool, false)
     eks_ami_query           = optional(bool, false)
     acm_cert_query          = optional(bool, false)
   })
   default                   = {
-    vpc_query               = true
-    subnets_query           = true
-    public_sg_query         = true
-    private_sg_query        = true
+    vpc_query               = false
+    subnets_query           = false 
+    public_sg_query         = false
+    private_sg_query        = false
     eks_ami_query           = false
     acm_cert_query          = false
   }
