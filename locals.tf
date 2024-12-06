@@ -8,7 +8,7 @@ locals {
                                             )
 
     environments                            = jsondecode(
-                                                file("${path.module}/metadata/programs.json")
+                                                file("${path.module}/metadata/environments.json")
                                             )
 
     regions                                 = jsondecode(
