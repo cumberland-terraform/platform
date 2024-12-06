@@ -5,11 +5,11 @@ variable "platform" {
     environment             = string
     region                  = optional(string, null)
     subnet_type             = optional(string, null)
-    availability_zones      = optional(list(string), null)
+    availability_zones      = optional(list(string), [])
   })
 
   validation {
-    condition               = var.platform.availability_zones == null || (
+    condition               = length(var.platform.availability_zones) == 0|| (
                               contains(var.platform.availability_zones, "A") 
                             ) || (
                               contains(var.platform.availability_zones, "B")
