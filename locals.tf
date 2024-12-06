@@ -29,12 +29,12 @@ locals {
 
     environment                             = {
         key                                 = try(local.environments[upper(var.platform.environment)].key, null)
-        name                                = try(local.environment[upper(var.platform.environment)].name, null)
+        name                                = try(local.environments[upper(var.platform.environment)].name, null)
     }
 
     region                                  = {
-        key                                 = try(local.environments[upper(var.platform.region)].key, null)
-        name                                = try(local.environment[upper(var.platform.region)].name, null)
+        key                                 = try(local.regions[upper(var.platform.region)].key, null)
+        name                                = try(local.regions[upper(var.platform.region)].name, null)
     }
 
     subnet_type                             = {
@@ -59,7 +59,7 @@ locals {
         Subnet                              = local.subnet_type.key
     } : {},
     local.region.key                        != null ? {
-        Region                              = local.aws.region.twoletterkey
+        Region                              = local.region.twoletterkey
     } : {})
     
     ########################################################################################
