@@ -76,7 +76,7 @@ locals {
                                                 local.subnet_type.key           != null,
                                                 length(var.platform.availability_zones) > 0,
                                             ])
-        public_sq_query_valid               = var.hydration.public_sg_query
+        public_sg_query_valid               = var.hydration.public_sg_query
         private_sg_query_valid              = var.hydration.private_sg_query
         eks_ami_query_valid                 = var.hydration.eks_ami_query
         acm_cert_query_valid                = var.hydration.acm_cert_query && (
@@ -93,12 +93,12 @@ locals {
         public_security_group               = {
             Client                          = [ local.client.key ]
             Enviroment                      = [ local.environment.key ]
-            Group                           = "PUBLIC"
+            Group                           = [ "PUBLIC" ]
         }
         private_security_group              = {
             Client                          = [ local.client.key ]
             Enviroment                      = [ local.environment.key ]
-            Group                           = "PRIVATE"
+            Group                           = [ "PRIVATE" ]
         }
         subnets                             = { 
             Client                          = [ local.client.key ]
