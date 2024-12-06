@@ -18,8 +18,8 @@ output "aws" {
   }
 }
 
-output "prefixes" {
-  description             = "Platform resource name prefixes, grouped by module family (compute, security, identity, etc.)."
+output "prefix" {
+  description             = "Platform resource name prefix."
   value                   = lower(join("-", [local.client.key, local.environment.key]))
 }
 
