@@ -59,7 +59,7 @@ locals {
         Subnet                              = local.subnet_type.key
     } : {},
     local.region.key                        != null ? {
-        Region                              = local.region.twoletterkey
+        Region                              = local.region.key
     } : {})
     
     ########################################################################################
