@@ -47,7 +47,7 @@ locals {
     ########################################################################################
     tags                                    = merge({
         CreationDate                        = formatdate("YYYY-MM-DD", timestamp())  
-        Terraform                           = true
+        Terraform                           = "true"
     }, 
     local.client.key                        != null ? {
         Client                              = local.client.key 
