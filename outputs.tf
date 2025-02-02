@@ -29,7 +29,7 @@ output "tags" {
 }
 
 output "network" {
-  description             = "MDThink Platform network resources for the inputted variables."
+  description             = "Platform network resources for the inputted variables."
   value                   = {
     vpc                   = try(data.aws_vpc.vpc[0], null)
     subnets               = try(data.aws_subnets.subnets[0], null)
