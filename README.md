@@ -1,7 +1,7 @@
 # Enterprise Terraform 
 ## Cumberland Cloud Platform
 
-This is the Cumberland CLoud Platform module. It provides the baseline configuration for the MDThink platform. All `mdt-eter-modules` modules use this repository as a submodule to enforce consistent naming standards and provide access to platform level information.
+This is the Cumberland CLoud Platform module. It provides the baseline configuration for the Cumberland Cloud platform. All Cumberland Cloud modules use this repository as a submodule to enforce consistent naming standards and provide access to platform level information.
 
 ### Usage
 
@@ -119,17 +119,12 @@ git tag v1.0.1
 git push tag v1.0.1
 ```
 
-Update the `CHANGELOG.md` with information about changes.
-
 ### Pull Request Checklist
 
 Ensure each item on the following checklist is complete before updating any tenant deployments with a new version of this module,
 
 - [] Merge `master` into `feature/*` branch
 - [] Open PR from `feature/*` branch into `master` branch
-- [] Ensure tests are passing in Jenkins
-- [] Get approval from lead
+- [] Get approval from owner
 - [] Merge into `master`
 - [] Increment `git tag` version
-- [] Update Changelog
-- [] Publish latest version on Confluence
