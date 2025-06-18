@@ -128,7 +128,7 @@ locals {
                                 "arn",
                                 "aws",
                                 "acm",
-                                data.aws_region.current.name,
+                                data.aws_region.current.id,
                                 data.aws_caller_identity.current.account_id,
                                 "certificate"
                             ])
@@ -154,7 +154,7 @@ locals {
                                 "arn",
                                 "aws",
                                 "kms",
-                                data.aws_region.current.name,
+                                data.aws_region.current.id,
                                 data.aws_caller_identity.current.account_id,
                                 "key"
                             ])
@@ -162,7 +162,7 @@ locals {
                                 "arn",
                                 "aws",
                                 "kms",
-                                data.aws_region.current.name,
+                                data.aws_region.current.id,
                                 data.aws_caller_identity.current.account_id,
                                 "alias"
                             ])
@@ -180,7 +180,7 @@ locals {
                                 "arn",
                                 "aws",
                                 "secretsmanager",
-                                data.aws_region.current.name,
+                                data.aws_region.current.id,
                                 data.aws_caller_identity.current.account_id,
                                 "secret"
 
