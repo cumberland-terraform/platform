@@ -53,7 +53,7 @@ locals {
         Client                              = local.client.key 
     } : {},
     local.environment.key                   != null ? {
-        Account                             = local.environment.key
+        Environment                         = local.environment.key
     } : {},
     local.subnet_type.key                   != null ? {
         Subnet                              = local.subnet_type.key
@@ -92,17 +92,17 @@ locals {
     queries                                 = {
         public_security_group               = {
             Client                          = [ local.client.key ]
-            Enviroment                      = [ local.environment.key ]
+            Environment                     = [ local.environment.key ]
             Group                           = [ "PUBLIC" ]
         }
         private_security_group              = {
             Client                          = [ local.client.key ]
-            Enviroment                      = [ local.environment.key ]
+            Environment                     = [ local.environment.key ]
             Group                           = [ "PRIVATE" ]
         }
         subnets                             = { 
             Client                          = [ local.client.key ]
-            Enviroment                      = [ local.environment.key ]
+            Environment                      = [ local.environment.key ]
             Subnet                          = [ local.subnet_type.key ]
             AZ                              = var.platform.availability_zones
         }
