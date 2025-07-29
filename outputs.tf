@@ -18,6 +18,11 @@ output "aws" {
   }
 }
 
+output "arns" {
+  description             = "Platform formatted ARNS"
+  value                   = local.arn
+}
+
 output "prefix" {
   description             = "Platform resource name prefix."
   value                   = lower(join("-", [local.client.key, local.environment.key]))
