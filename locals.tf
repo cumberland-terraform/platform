@@ -108,7 +108,7 @@ locals {
         }
         vpc                                 = {
             Client                          = [ local.client.key ]
-            Enviroment                      = [ local.environment.key ]
+            Environment                     = [ local.environment.key ]
         }
         eks_ami                             = {
             "tag:Version"                   = [ var.configuration.eks_ami_version ]
