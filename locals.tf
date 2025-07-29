@@ -134,6 +134,13 @@ locals {
                             ])
         }
         iam                 = {
+            policy          = join(":", [
+                                "arn",
+                                "aws",
+                                "iam:",
+                                data.aws_caller_identity.current.account_id,
+                                "policy"
+                            ])
             role            =  join(":", [
                                 "arn",
                                 "aws",
