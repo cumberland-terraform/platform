@@ -73,8 +73,7 @@ locals {
                                                 local.environment.key           != null,
                                             ])
         subnets_query_valid                 = var.hydration.subnets_query && alltrue([
-                                                local.subnet_type.key           != null,
-                                                length(var.platform.availability_zones) > 0,
+                                                local.subnet_type.key           != null                                            
                                             ])
         public_sg_query_valid               = var.hydration.public_sg_query
         private_sg_query_valid              = var.hydration.private_sg_query
