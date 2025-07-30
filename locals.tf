@@ -102,9 +102,8 @@ locals {
         }
         subnets                             = { 
             Client                          = [ local.client.key ]
-            Environment                      = [ local.environment.key ]
+            Environment                     = [ local.environment.key ]
             Subnet                          = [ local.subnet_type.key ]
-            AZ                              = var.platform.availability_zones
         }
         vpc                                 = {
             Client                          = [ local.client.key ]
